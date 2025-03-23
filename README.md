@@ -1,3 +1,154 @@
+# RecipeMaster
+
+RecipeMaster est une application web moderne de gestion de recettes culinaires. Ce projet utilise SvelteKit pour le frontend et JSON Server pour simuler un backend RESTful, offrant ainsi une expérience utilisateur fluide et interactive.
+
+## Fonctionnalités principales
+
+- ✅ Consultation d'une bibliothèque de recettes avec filtrage avancé
+- ✅ Création et modification de recettes personnelles
+- ✅ Gestion de favoris pour retrouver facilement ses recettes préférées
+- ✅ Interface multilingue (français, anglais, espagnol)
+- ✅ Authentification simulée des utilisateurs
+
+## Installation et démarrage
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/yourusername/recipe-master.git
+cd recipe-master
+
+# Installer les dépendances
+npm install
+
+# Lancer l'application en mode développement (frontend + backend)
+npm run dev:all
+
+# Ou lancer les services séparément
+npm run dev      # SvelteKit (frontend)
+npm run api      # JSON Server (backend)
+```
+
+L'application sera disponible sur [http://localhost:5173](http://localhost:5173) et l'API sur [http://localhost:3001](http://localhost:3001).
+
+## Architecture du projet
+
+### Frontend (SvelteKit)
+
+```
+src/
+├── lib/
+│   ├── components/              # Composants réutilisables
+│   │   ├── common/              # Boutons, champs de formulaire, etc.
+│   │   ├── layout/              # Header, Footer
+│   │   └── recipe/              # Composants spécifiques aux recettes
+│   ├── stores/                  # Gestion d'état global
+│   │   ├── auth.js              # Authentification
+│   │   └── recipes.js           # Gestion des recettes
+│   ├── services/                # Services API
+│   │   ├── api.js               # Configuration Axios
+│   │   ├── auth.js              # Service d'authentification
+│   │   └── recipes.js           # Service de gestion des recettes
+│   └── i18n/                    # Configuration internationalisation
+│       ├── index.js
+│       └── store.js
+└── routes/                      # Pages de l'application
+    ├── +layout.svelte           # Layout principal
+    ├── +page.svelte             # Page d'accueil
+    ├── recipes/                 # Routes pour les recettes
+    │   ├── +page.svelte         # Liste des recettes
+    │   ├── [id]/                # Détail d'une recette
+    │   ├── create/              # Création de recette
+    │   └── edit/[id]/           # Édition de recette
+    ├── login/                   # Page de connexion
+    ├── register/                # Page d'inscription
+    └── profile/                 # Profil utilisateur
+```
+
+### Backend simulé (JSON Server)
+
+Le fichier `db.json` à la racine du projet contient les données structurées utilisées par JSON Server :
+
+- **users** : Utilisateurs de l'application
+- **recipes** : Recettes avec tous leurs détails
+- **favorites** : Relations entre utilisateurs et recettes favorites
+- **categories** : Catégories pour classer les recettes
+- **comments** : Commentaires sur les recettes
+
+JSON Server génère automatiquement une API RESTful complète à partir de ce fichier.
+
+## Technologies utilisées
+
+- **SvelteKit** : Framework pour construire des applications web performantes
+- **Svelte** : Bibliothèque UI réactive qui compile le code pour optimiser les performances
+- **Paraglide** : Solution d'internationalisation pour le multilingue
+- **Axios** : Client HTTP pour communiquer avec l'API
+- **JSON Server** : Simulateur d'API REST
+- **TypeScript** : Typage statique pour améliorer la maintenabilité
+
+## Structure des données
+
+### Recette
+
+```typescript
+interface Recipe {
+  id: number;
+  userId: number;
+  title: string;
+  description: string;
+  type: string;               // 'appetizer', 'main', 'dessert', etc.
+  difficulty: string;         // 'easy', 'medium', 'hard'
+  prepTime: number;           // en minutes
+  cookTime: number;           // en minutes
+  servings: number;
+  ingredients: Ingredient[];
+  steps: string[];
+  imageUrl: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+interface Ingredient {
+  name: string;
+  amount: string;
+  unit: string;
+}
+```
+
+## Workflow de développement
+
+1. Exécutez `npm run dev:all` pour lancer l'application complète
+2. Modifiez les fichiers dans `src/` pour le développement frontend
+3. Les modifications sont automatiquement rechargées grâce à Vite
+4. Les changements apportés à `db.json` sont immédiatement disponibles via l'API
+
+## Routes API principales
+
+- `GET /recipes` : Liste de toutes les recettes
+- `GET /recipes/:id` : Détails d'une recette spécifique
+- `POST /recipes` : Création d'une nouvelle recette
+- `PUT /recipes/:id` : Mise à jour d'une recette
+- `DELETE /recipes/:id` : Suppression d'une recette
+- `GET /favorites?userId=:id` : Favoris d'un utilisateur
+
+## Fonctionnalités à venir
+
+- [ ] Système de commentaires et notation
+- [ ] Partage sur réseaux sociaux
+- [ ] Planification de menus hebdomadaires
+- [ ] Calcul automatique de valeurs nutritionnelles
+- [ ] Backend réel avec base de données persistante
+
+## Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à soumettre des pull requests ou à ouvrir des issues pour améliorer le projet.
+
+## Licence
+
+Ce projet est sous licence MIT.
+
+
+
 # Présentation détaillée du projet RecipeMaster
 
 ## Introduction au projet
