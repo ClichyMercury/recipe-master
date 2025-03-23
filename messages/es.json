@@ -1,0 +1,87 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name} from es!",
+        "app": {
+          "title": "RecipeMaster",
+          "tagline": "La mejor manera de gestionar tus recetas"
+        },
+        "nav": {
+          "home": "Inicio",
+          "recipes": "Recetas",
+          "login": "Iniciar sesión",
+          "register": "Registrarse",
+          "logout": "Cerrar sesión",
+          "profile": "Perfil"
+        },
+        "recipes": {
+          "list": {
+            "title": "Nuestras Recetas",
+            "filter": "Filtrar",
+            "search": "Buscar",
+            "noResults": "No se encontraron recetas",
+            "addNew": "Añadir nueva receta"
+          },
+          "detail": {
+            "ingredients": "Ingredientes",
+            "steps": "Pasos",
+            "prepTime": "Tiempo de preparación",
+            "cookTime": "Tiempo de cocción",
+            "totalTime": "Tiempo total",
+            "servings": "Porciones",
+            "difficulty": "Dificultad",
+            "edit": "Editar",
+            "delete": "Eliminar",
+            "addToFavorites": "Añadir a favoritos",
+            "removeFromFavorites": "Quitar de favoritos"
+          },
+          "form": {
+            "title": "Título",
+            "description": "Descripción",
+            "type": "Tipo",
+            "difficulty": "Dificultad",
+            "prepTime": "Tiempo de preparación (min)",
+            "cookTime": "Tiempo de cocción (min)",
+            "servings": "Porciones",
+            "ingredients": "Ingredientes",
+            "addIngredient": "Añadir ingrediente",
+            "steps": "Pasos",
+            "addStep": "Añadir paso",
+            "tags": "Etiquetas",
+            "addTag": "Añadir etiqueta",
+            "saveRecipe": "Guardar receta",
+            "cancel": "Cancelar"
+          }
+        },
+        "auth": {
+          "login": {
+            "title": "Iniciar sesión",
+            "email": "Correo electrónico",
+            "password": "Contraseña",
+            "submit": "Iniciar sesión",
+            "noAccount": "¿No tienes cuenta?",
+            "register": "Registrarse"
+          },
+          "register": {
+            "title": "Registrarse",
+            "username": "Nombre de usuario",
+            "email": "Correo electrónico",
+            "password": "Contraseña",
+            "confirmPassword": "Confirmar contraseña",
+            "submit": "Registrarse",
+            "haveAccount": "¿Ya tienes cuenta?",
+            "login": "Iniciar sesión"
+          }
+        },
+        "common": {
+          "loading": "Cargando...",
+          "error": "Ha ocurrido un error",
+          "save": "Guardar",
+          "cancel": "Cancelar",
+          "delete": "Eliminar",
+          "edit": "Editar",
+          "minutes": "minutos",
+          "easy": "Fácil",
+          "medium": "Medio",
+          "hard": "Difícil"
+        }
+      }

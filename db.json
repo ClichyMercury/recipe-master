@@ -1,0 +1,241 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "chef1",
+      "email": "chef1@example.com",
+      "password": "hashed_password"
+    },
+    {
+      "id": "2",
+      "username": "pastry_lover",
+      "email": "pastry@example.com",
+      "password": "hashed_password"
+    },
+    {
+      "id": "d3cf",
+      "username": "gsdotdev49",
+      "email": "gael@jeko.ci",
+      "password": "123123123"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "Pasta Carbonara",
+      "description": "Classic Italian pasta dish with eggs and pancetta",
+      "type": "main",
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "spaghetti",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "eggs",
+          "amount": "4",
+          "unit": ""
+        },
+        {
+          "name": "pancetta",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "parmesan cheese",
+          "amount": "50",
+          "unit": "g"
+        },
+        {
+          "name": "black pepper",
+          "amount": "1",
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Cook pasta according to package instructions",
+        "Fry pancetta until crispy",
+        "Mix eggs with cheese and pepper",
+        "Combine all ingredients while pasta is hot"
+      ],
+      "imageUrl": "/images/recipes/carbonara.jpg",
+      "tags": [
+        "italian",
+        "pasta",
+        "quick"
+      ],
+      "createdAt": "2023-05-15T14:30:00Z",
+      "updatedAt": "2023-05-15T14:30:00Z"
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "title": "Tarte aux Pommes",
+      "description": "Délicieuse tarte aux pommes traditionnelle française",
+      "type": "dessert",
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "pâte brisée",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "name": "pommes",
+          "amount": "6",
+          "unit": ""
+        },
+        {
+          "name": "sucre",
+          "amount": "100",
+          "unit": "g"
+        },
+        {
+          "name": "cannelle",
+          "amount": "1",
+          "unit": "tsp"
+        },
+        {
+          "name": "beurre",
+          "amount": "50",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 180°C",
+        "Étaler la pâte dans un moule à tarte",
+        "Éplucher et couper les pommes en fines tranches",
+        "Disposer les pommes sur la pâte",
+        "Saupoudrer de sucre et de cannelle",
+        "Ajouter des petits morceaux de beurre",
+        "Cuire pendant 45 minutes"
+      ],
+      "imageUrl": "/images/recipes/tarte-pommes.jpg",
+      "tags": [
+        "french",
+        "dessert",
+        "fruit"
+      ],
+      "createdAt": "2023-06-10T09:45:00Z",
+      "updatedAt": "2023-06-10T09:45:00Z"
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "title": "Guacamole",
+      "description": "Fresh avocado dip with lime and cilantro",
+      "type": "appetizer",
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 0,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "avocados",
+          "amount": "3",
+          "unit": ""
+        },
+        {
+          "name": "lime",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "name": "tomato",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "name": "onion",
+          "amount": "1/4",
+          "unit": ""
+        },
+        {
+          "name": "cilantro",
+          "amount": "2",
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "amount": "",
+          "unit": "to taste"
+        }
+      ],
+      "steps": [
+        "Mash the avocados",
+        "Dice tomato and onion",
+        "Chop cilantro",
+        "Mix all ingredients",
+        "Add lime juice and salt"
+      ],
+      "imageUrl": "/images/recipes/guacamole.jpg",
+      "tags": [
+        "mexican",
+        "dip",
+        "vegan"
+      ],
+      "createdAt": "2023-07-05T18:20:00Z",
+      "updatedAt": "2023-07-05T18:20:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Italian",
+      "description": "Italian cuisine"
+    },
+    {
+      "id": "2",
+      "name": "Desserts",
+      "description": "Sweet recipes"
+    },
+    {
+      "id": "3",
+      "name": "Mexican",
+      "description": "Mexican cuisine"
+    },
+    {
+      "id": "4",
+      "name": "Vegetarian",
+      "description": "Meat-free recipes"
+    }
+  ],
+  "favorites": [
+    {
+      "id": "1",
+      "userId": 1,
+      "recipeId": 2
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "recipeId": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "recipeId": 1,
+      "userId": 2,
+      "text": "Delicious recipe! I added a bit more cheese.",
+      "rating": 5,
+      "createdAt": "2023-05-16T10:15:00Z"
+    },
+    {
+      "id": "2",
+      "recipeId": 2,
+      "userId": 1,
+      "text": "Simple et excellente tarte!",
+      "rating": 4,
+      "createdAt": "2023-06-12T14:30:00Z"
+    }
+  ]
+}

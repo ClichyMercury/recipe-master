@@ -1,0 +1,87 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name}!",
+	"app": {
+	  "title": "RecipeMaster",
+	  "tagline": "The best way to manage your recipes"
+	},
+	"nav": {
+	  "home": "Home",
+	  "recipes": "Recipes",
+	  "login": "Login",
+	  "register": "Register",
+	  "logout": "Logout",
+	  "profile": "Profile"
+	},
+	"recipes": {
+	  "list": {
+		"title": "Our recipes",
+		"filter": "Filter",
+		"search": "Search",
+		"noResults": "No recipes found",
+		"addNew": "Add new recipe"
+	  },
+	  "detail": {
+		"ingredients": "Ingredients",
+		"steps": "Steps",
+		"prepTime": "Preparation time",
+		"cookTime": "Cooking time",
+		"totalTime": "Total time",
+		"servings": "Servings",
+		"difficulty": "Difficulty",
+		"edit": "Edit",
+		"delete": "Delete",
+		"addToFavorites": "Add to favorites",
+		"removeFromFavorites": "Remove from favorites"
+	  },
+	  "form": {
+		"title": "Title",
+		"description": "Description",
+		"type": "Type",
+		"difficulty": "Difficulty",
+		"prepTime": "Preparation time (min)",
+		"cookTime": "Cooking time (min)",
+		"servings": "Servings",
+		"ingredients": "Ingredients",
+		"addIngredient": "Add ingredient",
+		"steps": "Steps",
+		"addStep": "Add step",
+		"tags": "Tags",
+		"addTag": "Add tag",
+		"saveRecipe": "Save recipe",
+		"cancel": "Cancel"
+	  }
+	},
+	"auth": {
+	  "login": {
+		"title": "Login",
+		"email": "Email",
+		"password": "Password",
+		"submit": "Login",
+		"noAccount": "Don't have an account?",
+		"register": "Register"
+	  },
+	  "register": {
+		"title": "Register",
+		"username": "Username",
+		"email": "Email",
+		"password": "Password",
+		"confirmPassword": "Confirm password",
+		"submit": "Register",
+		"haveAccount": "Already have an account?",
+		"login": "Login"
+	  }
+	},
+	"common": {
+	  "loading": "Loading...",
+	  "error": "An error occurred",
+	  "save": "Save",
+	  "cancel": "Cancel",
+	  "delete": "Delete",
+	  "edit": "Edit",
+	  "minutes": "minutes",
+	  "easy": "Easy",
+	  "medium": "Medium",
+	  "hard": "Hard"
+	}
+  }
