@@ -14,7 +14,7 @@ RecipeMaster est une application web moderne de gestion de recettes culinaires. 
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/yourusername/recipe-master.git
+git clone https://github.com/ClichyMercury/recipe-master.git
 cd recipe-master
 
 # Installer les dépendances
