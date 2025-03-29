@@ -1,13 +1,28 @@
 import axios from 'axios';
 
+// Déterminer l'URL de base selon l'environnement
+const getBaseUrl = () => {
+  // En production sur Vercel, utilisez l'URL de l'API
+  if (import.meta.env.PROD) {
+    // Si votre API est sur le même domaine (sous /api)
+    return '/api';
+    
+    // Si vous utilisez une API externe, spécifiez l'URL complète
+    // return 'https://votre-api-externe.com';
+  }
+  
+  // En développement, utilisez localhost:3001
+  return 'http://localhost:3001';
+};
+
 // Créer une instance axios avec la configuration de base
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: getBaseUrl(),
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json'
   }
-})
+});
 
 // Intercepteur pour ajouter le token d'authentification aux requêtes
 api.interceptors.request.use(
